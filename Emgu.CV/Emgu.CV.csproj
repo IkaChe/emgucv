@@ -127,6 +127,7 @@
     <Compile Include="OclDevice.cs" />
     <Compile Include="OclPlatformInfo.cs" />
     <Compile Include="PInvoke\CvInvokeOptim.cs" />
+    <Compile Include="PInvoke\CvInvokeRaspiCamCV.cs" />
     <Compile Include="StereoMatcherExtensions.cs" />
     <Compile Include="UMat.cs" />
     <Compile Include="Util\CvString.cs" />
