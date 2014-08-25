@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace Emgu.CV.PInvoke
+namespace Emgu.CV
 {
     /// <summary>
     /// Wrapper for https://github.com/robidouille/robidouille/tree/master/raspicam_cv
@@ -12,7 +12,7 @@ namespace Emgu.CV.PInvoke
     public class CvInvokeRaspiCamCV
     {
 
-#if (ANDROID)
+#if (LINUX)
         public const string OpencvRaspiCamCVLibrary = "raspicamcv";
         public const string EntryPointCapture = "raspiCamCvCreateCameraCapture";
         public const string EntryPointQuery = "raspiCamCvQueryFrame";

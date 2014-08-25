@@ -733,7 +733,6 @@ Emgu.CV/INSTALL.vcxproj.filters
 Emgu.CV/PACKAGE.vcxproj
 Emgu.CV/PACKAGE.vcxproj.filters
 Emgu.CV/PInvoke/CvInvokeEntryPoints.cs
-Emgu.CV/PInvoke/CvInvokeRaspiCamCV.cs
 Emgu.CV/README.txt
 Emgu.CV/RUN_TESTS.vcxproj
 Emgu.CV/RUN_TESTS.vcxproj.filters

@@ -18,7 +18,7 @@ namespace CameraCapture
 {
    public partial class CameraCapture : Form
    {
-      private Capture _capture = null;
+       private CapturePi _capture = null;
       private bool _captureInProgress;
 
       public CameraCapture()
@@ -27,19 +27,21 @@ namespace CameraCapture
          CvInvoke.UseOpenCL = false;
          try
          {
-            _capture = new Capture();
+            _capture = new CapturePi();
             _capture.ImageGrabbed += ProcessFrame;
          }
          catch (NullReferenceException excpt)
          {
             MessageBox.Show(excpt.Message);
          }
+
+         Console.WriteLine("OpencvRaspiCamCVLibrary = " + CvInvokeRaspiCamCV.OpencvRaspiCamCVLibrary);
       }
 
       private void ProcessFrame(object sender, EventArgs arg)
       {
          Mat frame = new Mat();
-         _capture.Retrieve(frame, 0);
+         _capture.Retrieve(frame);
          Mat grayFrame = new Mat();
          CvInvoke.CvtColor(frame, grayFrame, ColorConversion.Bgr2Gray);
          Mat smallGrayFrame = new Mat();
