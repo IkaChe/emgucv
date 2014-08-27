@@ -48,7 +48,7 @@ namespace Emgu.CV
         /// The function cvReleaseCapture releases the CvCapture structure allocated by cvCreateFileCapture or cvCreateCameraCapture
         /// </summary>
         /// <param name="capture">pointer to video capturing structure.</param>
-        [DllImport(OpencvRaspiCamCVLibrary, EntryPoint="EntryPointRelease", CallingConvention = CvInvoke.CvCallingConvention)]
+        [DllImport(OpencvRaspiCamCVLibrary, EntryPoint=EntryPointRelease, CallingConvention = CvInvoke.CvCallingConvention)]
         public static extern void cvReleaseCapture(ref IntPtr capture);
 
     }
